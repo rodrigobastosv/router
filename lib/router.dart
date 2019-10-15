@@ -1,9 +1,9 @@
-library router;
+library simple_router;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Router {
+class SimpleRouter {
   static final GlobalKey<NavigatorState> navigatorKey =
   GlobalKey<NavigatorState>();
 

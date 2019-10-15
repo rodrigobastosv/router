@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      navigatorKey: Router.getKey(),
+      navigatorKey: SimpleRouter.getKey(),
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => Router.forward(Page2()),
+        onPressed: () => SimpleRouter.forward(Page2()),
         child: Icon(Icons.chevron_right),
       ),
     );

@@ -1,8 +1,8 @@
-name: router
+name: simple_router
 description: A simple router for flutter
 version: 0.0.1
-author:
-homepage:
+author: Rodrigo Vasconcelos <rodrigobastosv@gmail.com>
+homepage: https://github.com/rodrigobastosv/router
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

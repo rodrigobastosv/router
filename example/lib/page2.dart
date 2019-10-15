@@ -10,7 +10,7 @@ class Page2 extends StatelessWidget {
           child: Text('I\'m on page 2'),
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () => Router.back(), child: Icon(Icons.chevron_left),),
+      floatingActionButton: FloatingActionButton(onPressed: () => SimpleRouter.back(), child: Icon(Icons.chevron_left),),
     );
   }
 }
