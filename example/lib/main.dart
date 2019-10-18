@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:router/router.dart';
+import 'package:router/simple_router.dart';
 
 import 'package:example/page2.dart';
 
