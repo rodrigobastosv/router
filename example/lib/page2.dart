@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:router/simple_router.dart';
+import 'package:router/router.dart';
 
 class Page2 extends StatelessWidget {
   @override
@@ -10,7 +10,10 @@ class Page2 extends StatelessWidget {
           child: Text('I\'m on page 2'),
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () => SimpleRouter.back(), child: Icon(Icons.chevron_left),),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Router.back(),
+        child: Icon(Icons.chevron_left),
+      ),
     );
   }
 }

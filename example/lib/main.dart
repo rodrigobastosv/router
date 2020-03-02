@@ -1,6 +1,6 @@
 import 'package:example/page2.dart';
 import 'package:flutter/material.dart';
-import 'package:router/simple_router.dart';
+import 'package:router/router.dart';
 
 void main() {
   Router.onBeforePush = (widget) {
