@@ -3,7 +3,7 @@ library router;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Router {
+class SimpleRouter {
   static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
   static bool useCupertinoTransition = false;

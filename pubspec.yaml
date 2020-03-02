@@ -1,4 +1,4 @@
-name: router
+name: simple_router
 description: A simple router for flutter to navigate beetween screens without the need of the context. This package also provides middleware capabilities on route transitions.
 version: 0.0.3
 homepage: https://github.com/rodrigobastosv/router

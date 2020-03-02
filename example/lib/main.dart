@@ -1,12 +1,12 @@
 import 'package:example/page2.dart';
 import 'package:flutter/material.dart';
-import 'package:router/router.dart';
+import 'package:router/simple_router.dart';
 
 void main() {
-  Router.onBeforePush = (widget) {
+  SimpleRouter.onBeforePush = (widget) {
     print('[Router]: Navigated to ${widget.toString()}');
   };
-  Router.onAfterPush = (widget) {
+  SimpleRouter.onAfterPush = (widget) {
     print('[Router]: Navigated out of ${widget.toString()}');
   };
   runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      navigatorKey: Router.getKey(),
+      navigatorKey: SimpleRouter.getKey(),
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => Router.forward(Page2()),
+        onPressed: () => SimpleRouter.forward(Page2()),
         child: Icon(Icons.chevron_right),
       ),
     );
