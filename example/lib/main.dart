@@ -1,9 +1,16 @@
+import 'package:example/page2.dart';
 import 'package:flutter/material.dart';
 import 'package:router/simple_router.dart';
 
-import 'package:example/page2.dart';
-
-void main() => runApp(MyApp());
+void main() {
+  SimpleRouter.onBeforePush = (widget) {
+    print('[Router]: Navigated to ${widget.toString()}');
+  };
+  SimpleRouter.onAfterPush = (widget) {
+    print('[Router]: Navigated out of ${widget.toString()}');
+  };
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
