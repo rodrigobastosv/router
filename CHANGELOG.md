@@ -1,3 +1,7 @@
+## [0.0.3+1] - Added New Features
+
+Add the possibility to pass a name to the route
+
 ## [0.0.3] - Added New Features
 
 Add the possibility to add middlewares on transitions

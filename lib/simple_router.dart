@@ -19,7 +19,7 @@ class SimpleRouter {
     return navigatorKey;
   }
 
-  static Future<dynamic> forward(Widget widget) async {
+  static Future<dynamic> forward(Widget widget, [String name]) async {
     if (onBeforePush != null) {
       onBeforePush(widget);
     }
@@ -28,11 +28,11 @@ class SimpleRouter {
       useCupertinoTransition
           ? CupertinoPageRoute(
               builder: (_) => widget,
-              settings: RouteSettings(name: widget.toString()),
+              settings: RouteSettings(name: name ?? widget.toString()),
             )
           : MaterialPageRoute(
               builder: (_) => widget,
-              settings: RouteSettings(name: widget.toString()),
+              settings: RouteSettings(name: name ?? widget.toString()),
             ),
     );
 
@@ -42,7 +42,7 @@ class SimpleRouter {
     return routeFuture;
   }
 
-  static Future<dynamic> forwardAndReplace(Widget widget) async {
+  static Future<dynamic> forwardAndReplace(Widget widget, [String name]) async {
     if (onBeforePush != null) {
       onBeforePush(widget);
     }
@@ -51,11 +51,11 @@ class SimpleRouter {
       useCupertinoTransition
           ? CupertinoPageRoute(
               builder: (_) => widget,
-              settings: RouteSettings(name: widget.toString()),
+              settings: RouteSettings(name: name ?? widget.toString()),
             )
           : MaterialPageRoute(
               builder: (_) => widget,
-              settings: RouteSettings(name: widget.toString()),
+              settings: RouteSettings(name: name ?? widget.toString()),
             ),
     );
 
@@ -65,8 +65,8 @@ class SimpleRouter {
     return routeFuture;
   }
 
-  static Future<dynamic> forwardAndRemoveUntil(
-      Widget widget, String name) async {
+  static Future<dynamic> forwardAndRemoveUntil(Widget widget, String route,
+      [String name]) async {
     if (onBeforePush != null) {
       onBeforePush(widget);
     }
@@ -75,13 +75,13 @@ class SimpleRouter {
       useCupertinoTransition
           ? CupertinoPageRoute(
               builder: (_) => widget,
-              settings: RouteSettings(name: widget.toString()),
+              settings: RouteSettings(name: name ?? widget.toString()),
             )
           : MaterialPageRoute(
               builder: (_) => widget,
-              settings: RouteSettings(name: widget.toString()),
+              settings: RouteSettings(name: name ?? widget.toString()),
             ),
-      (r) => r.settings.name == name,
+      (r) => r.settings.name == route,
     );
 
     if (onAfterPush != null) {
@@ -90,7 +90,8 @@ class SimpleRouter {
     return routeFuture;
   }
 
-  static Future<dynamic> forwardAndRemoveAll(Widget widget) async {
+  static Future<dynamic> forwardAndRemoveAll(Widget widget,
+      [String name]) async {
     if (onBeforePush != null) {
       onBeforePush(widget);
     }
@@ -99,11 +100,11 @@ class SimpleRouter {
       useCupertinoTransition
           ? CupertinoPageRoute(
               builder: (_) => widget,
-              settings: RouteSettings(name: widget.toString()),
+              settings: RouteSettings(name: name ?? widget.toString()),
             )
           : MaterialPageRoute(
               builder: (_) => widget,
-              settings: RouteSettings(name: widget.toString()),
+              settings: RouteSettings(name: name ?? widget.toString()),
             ),
       (r) => false,
     );
