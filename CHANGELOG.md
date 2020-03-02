@@ -1,3 +1,7 @@
+## [0.0.3+2] - Improve
+
+Correcting to named parameter
+
 ## [0.0.3+1] - Added New Features
 
 Add the possibility to pass a name to the route

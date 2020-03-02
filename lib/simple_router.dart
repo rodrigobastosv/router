@@ -19,7 +19,7 @@ class SimpleRouter {
     return navigatorKey;
   }
 
-  static Future<dynamic> forward(Widget widget, [String name]) async {
+  static Future<dynamic> forward(Widget widget, {String name}) async {
     if (onBeforePush != null) {
       onBeforePush(widget);
     }
@@ -42,7 +42,7 @@ class SimpleRouter {
     return routeFuture;
   }
 
-  static Future<dynamic> forwardAndReplace(Widget widget, [String name]) async {
+  static Future<dynamic> forwardAndReplace(Widget widget, {String name}) async {
     if (onBeforePush != null) {
       onBeforePush(widget);
     }
@@ -66,7 +66,7 @@ class SimpleRouter {
   }
 
   static Future<dynamic> forwardAndRemoveUntil(Widget widget, String route,
-      [String name]) async {
+      {String name}) async {
     if (onBeforePush != null) {
       onBeforePush(widget);
     }
@@ -91,7 +91,7 @@ class SimpleRouter {
   }
 
   static Future<dynamic> forwardAndRemoveAll(Widget widget,
-      [String name]) async {
+      {String name}) async {
     if (onBeforePush != null) {
       onBeforePush(widget);
     }
