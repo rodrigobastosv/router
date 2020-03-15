@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:router/simple_router.dart';
+import 'package:simple_router/simple_router.dart';
 
 class Page2 extends StatelessWidget {
   @override

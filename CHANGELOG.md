@@ -1,3 +1,7 @@
+## [0.1.0]
+
+Fully usable api
+
 ## [0.0.3+2] - Improve
 
 Correcting to named parameter
