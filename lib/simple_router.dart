@@ -130,7 +130,7 @@ class SimpleRouter {
   }
 
   /// Back the navigation, it's similar with Navigator.of(context).pop()`
-  static bool back<T extends Object>([T result]) {
-    return navigatorKey.currentState.pop(result);
+  static void back<T extends Object>([T result]) {
+    navigatorKey.currentState.pop(result);
   }
 }
