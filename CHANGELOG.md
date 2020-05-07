@@ -1,3 +1,7 @@
+## [0.1.0+1]
+
+Updating to the new Flutter stable version
+
 ## [0.1.0]
 
 Fully usable api
