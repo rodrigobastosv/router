@@ -1,3 +1,7 @@
+## [1.0.0-nullsafety.0]
+
+Migrating to null safe
+
 ## [0.1.0+1]
 
 Updating to the new Flutter stable version
