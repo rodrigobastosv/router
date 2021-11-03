@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 /// Class responsable for doing the navigation
 class SimpleRouter {
   /// The navigatorKey, this is a required one. Use the default or set your own key
-  static late GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+  static late GlobalKey<NavigatorState> navigatorKey =
+      GlobalKey<NavigatorState>();
 
   /// [bool] value to set the use of cupertino transitions
   static bool useCupertinoTransition = false;
@@ -53,7 +54,8 @@ class SimpleRouter {
 
   /// Forward navigation and replace current one, it's similar
   /// to `Navigator.of(context).pushAndReplace`
-  static Future<dynamic> forwardAndReplace(Widget widget, {String? name}) async {
+  static Future<dynamic> forwardAndReplace(Widget widget,
+      {String? name}) async {
     if (onBeforePush != null) {
       onBeforePush!(widget);
     }
