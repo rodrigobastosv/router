@@ -1,3 +1,7 @@
+## [1.0.0+2]
+
+Adjusting README
+
 ## [1.0.0+1]
 
 Formatting files
